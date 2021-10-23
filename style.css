@@ -1,3 +1,6 @@
+/* Mobile */
+
+@media screen and (min-width: 280px) {
 * {
   margin: 0;
   padding: 0;
@@ -17,9 +20,10 @@ body {
 }
 
 main {
-  background: url("images/background.png");
-  width: 375px;
-  height: 812px;
+  background: url("images/background.png") no-repeat center/cover;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
 }
 
 .container {
@@ -75,4 +79,37 @@ ul {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
+}
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1200px){
+  div.container {
+    display: block;
+  }
+  
+  .container {
+    max-width: 350px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: var(--gray);
+    background: url("images/background.png") no-repeat center/cover;
+  }
+
+  .avatar {
+    padding: 60px;
+    width: 10rem;
+    margin: 11.5rem auto 0;
+    position: relative;
+  }
+  
+  .avatar span {
+    padding-top: 60px;
+    position: absolute;
+    top: -15px;
+    z-index: 1;
+  }
 }

@@ -4,6 +4,7 @@ const linksUser = {
   instagram: "guumelo",
   facebook: "gustavo.mello.779",
   twitter: "gusta_meelo",
+  linkedin: "gustavo-melo-a3ba73199"
 };
 
 function setLinksUser() {
@@ -14,6 +15,17 @@ function setLinksUser() {
 }
 
 setLinksUser();
+
+function setLinkLinkedin(){
+  for(let li of socialLinks.children){
+    const social = li.getAttribute("class")
+    if(li.getAttribute("class") === "linkedin"){
+      li.children[0].href = `https://${social}.com/in/${linksUser[social]}`
+    }
+  }
+}
+
+setLinkLinkedin()
 
 function getGitHubProfileInfos(){
     const url = `https://api.github.com/users/${linksUser.github}`
